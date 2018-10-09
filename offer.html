@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Open+Sans">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-10">
+          <form action="" name="offers">
+           <div class="col-md-4 ">
+    <div>
+                 <label for="sell">Sell<superscript>*</superscript></label> 
+                <select class="form-control" id="sell" name="sell">
+  <option value="one">asset to sell</option>
+
+</select>
+             </div>
+             <div>
+                  <label for="Buy">Buy<superscript>*</superscript></label> 
+                  <input type="text" class="form-control" placeholder="0" id="buy" name="buy">
+             </div> 
+           </div> 
+             <div class="col-md-4 pull-right">           
+            <div >
+                 <label for="Amount">Amount<superscript>*</superscript></label> 
+                <select class="form-control" id="amount" name="amount">
+  <option>asset to buy</option>
+
+  <option>5</option>
+</select>
+             </div>
+             <div>
+                  <label for="Price">Price<superscript>*</superscript></label> 
+                  <input type="number" class="form-control" placeholder="1" id="price" name="price">
+             </div>
+             </div>
+ <button class="btn btn-primary">create offer</button>
+          </form>
+            <table class="table table-bordered results">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Department</th>
+                        <th>Phone</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>John Doe</td>
+                        <td>Administration</td>
+                        <td>(171) 555-2222</td>
+                        <td>
+							<a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
+                            <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                            <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Peter Parker</td>
+                        <td>Customer Service</td>
+                        <td>(313) 555-5735</td>
+                        <td>
+							<a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
+                            <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                            <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Fran Wilson</td>
+                        <td>Human Resources</td>
+                        <td>(503) 555-9931</td>
+                        <td>
+							<a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
+                            <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                            <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                        </td>
+                    </tr>      
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script>
+    $(function() {
+  $('form[name="offers"]').submit(function(e) {
+    e.preventDefault();
+    var sell  = $('input[name="sell"]').val(),
+        buy = $('input[name="buy"]').val(),
+        amount   = $('input[name="amount"]').val(),
+        price   = $('input[name="price"]').val(),
+
+   if($('.results').length < 1) {
+      $('body').append('<table class="results">'
+                        +'<tr>'
+                          +'<th>Nume</th>'
+                          +'<th>Prenume</th>'
+                          +'<th>CNP</th>'
+                          +'<th>Varsta</th>'
+                          +'<th>Ocupatia</th>'
+                        +'</tr>'
+                        +'<tr>' 
+                          +'<td>'+name+'</td>'
+                          +'<td>'+sName+'</td>'
+                          +'<td>'+cnp+'</td>'
+                          +'<td>'+age+'</td>'
+                          +'<td>'+ocu+'</td>'
+                        +'</tr>'
+                     + '</table>');
+   }
+
+  });
+
+});
+    </script>
+</body>
+</html>
